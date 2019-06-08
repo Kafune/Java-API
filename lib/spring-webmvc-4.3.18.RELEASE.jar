@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Malwarebytes</title>
+  <script src="./scripts/vendor/vue.min.js"></script>
+  <script src="./scripts/vendor/vue-i18n.js"></script>
+  <script src="./scripts/vendor/vue-router.js"></script>
+  <script src="./scripts/vendor/jquery-1.11.3.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="./scripts/styles.css?d=201921">
+  <!-- <link type="text/css" rel="stylesheet" href="http://localhost:8080/scripts/styles.css?123"> -->
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MKSKW3');</script>
+  <!-- End Google Tag Manager -->
+
+                    <script>var w=window;if(w.performance||w.mozPerformance||w.msPerformance||w.webkitPerformance){var d=document;AKSB=w.AKSB||{},AKSB.q=AKSB.q||[],AKSB.mark=AKSB.mark||function(e,_){AKSB.q.push(["mark",e,_||(new Date).getTime()])},AKSB.measure=AKSB.measure||function(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.done=AKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte",(new Date).getTime()),AKSB.prof={custid:"471776",ustr:"",originlat:"0",clientrtt:"11",ghostip:"95.101.21.108",ipv6:false,pct:"10",clientip:"95.96.32.179",requestid:"1a5818ce",region:"32471",protocol:"",blver:14,akM:"g",akN:"ae",akTT:"O",akTX:"1",akTI:"1a5818ce",ai:"289157",ra:"false",pmgn:"",pmgi:"",pmp:"",qc:""},function(e){var _=d.createElement("script");_.async="async",_.src=e;var t=d.getElementsByTagName("script"),t=t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"===d.location.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</script>
+                    </head>
+
+<body id="block-page">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKSKW3" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="app" v-cloak>
+    <div id="header">
+      <img src="https://www.malwarebytes.com/images/malwarebytes-main-logo.png" alt="Malwarebytes">
+      <h1 class="product-name" v-if="!isTrial && showPremium">PREMIUM</h1>
+      <h1 class="product-name" v-if="isTrial && showPremium">PREMIUM TRIAL</h1>
+      <h1 class="product-name" v-if="isTrial && !showPremium">TRIAL</h1>
+    </div>
+    <div class="container" v-bind:class="{ ru: lang === 'ru', fr: lang === 'fr', br: lang === 'br', it: lang === 'it', pt: lang === 'pt', pl: lang === 'pl', de: lang === 'de'  }">
+      <div id="blocked-message">
+        <div class="message-block">
+          <h1 class="threat-heading">{{$t(category + ".heading", { productTitle: prodTitleList.header })}}</h1>
+          <p class="sub-heading">{{$t(category +".subheading", { productTitle: prodTitleList.subheading })}}</p>
+          <p class="warning">{{$t("warning")}}</p>
+        </div>
+
+        <div class="cta-bar">
+          <a v-bind:id="'cta-blockpage-goback-' + lang" class="cta"
+            href="javascript:window.history.back();">{{$t("go-back")}}</a>
+          <div class="blocked-continue tooltip premium" v-if="showPremium" v-on:click="openTooltip">
+            {{$t("continue")}}
+            <img src="./images/tooltip.png" class="info" alt="Icon">
+            <div class="tooltip-info" v-bind:class="{ hidden: !showTooltip }">
+              <p class="continue" v-if='isTrial' v-html='$t("continue-tooltip", {lang: lang, utm: utm })'></p>
+              <p class="continue-generic" v-if='!isTrial'
+                v-html='$t("continue-tooltip-generic", {lang: lang, utm: utm })'></p>
+            </div>
+          </div>
+        </div>
+        <img class="shield" src="./images/shield.png" alt="Icon">
+      </div>
+      <div id="banner" v-if="showBanner">
+        <p class="time-remaining">{{timeRemaining}}</p>
+        <p class="banner-msg" v-if="isTrial && timeUnit === 'days'">{{$t("time-remaining.trial-days-remaining")}}</p>
+        <p class="banner-msg" v-if="isTrial && timeUnit === 'hours'">{{$t("time-remaining.trial-hours-remaining")}}</p>
+        <p class="banner-msg" v-if="!isTrial && timeUnit === 'days'">{{$t("time-remaining.license-days-remaining")}}</p>
+        <p class="banner-msg" v-if="!isTrial && timeUnit === 'hours'">{{$t("time-remaining.license-hours-remaining")}}
+        </p>
+        <a v-bind:id="'cta-blockpage-malware-buynow'+lang" class="cta" href="https://www.malwarebytes.com/pricing/?utm_source=inproduct&utm_medium=block_page&utm_campaign=windows_block_page"
+          v-if="isTrial">{{$t("purchase.buy-now")}}</a>
+      </div>
+      <div id="learn-more">
+        <hr />
+        <h2 id="what-is" class="text whatis">{{$t(category + ".whatis")}}</h2>
+        <p class="threat-desc">
+          {{$t(category + ".desc")}}
+        </p>
+        <a id="'cta-blockpage-malware-learnmore'+lang" class="learn-more-link"
+          v-bind:href="$t(category + '.learnmore', {utm : utm})">{{$t("learn-more")}}</a>
+        <hr />
+      </div>
+      <!-- ONLY SHOW FOR TRIAL USERS -->
+      <div id="upgrade-premium" class="upgrade" v-if="isTrial">
+        <img src="./images/mb-shield.png" alt="Shield icon">
+        <p v-html='$t("purchase.buy-premium", { productTitle: prodTitleList.upgrade, lang: lang, utm: utm })'></p>
+      </div>
+      <!-- ONLY SHOW FOR MB3 USERS -->
+      <div id="add-devices" class="upgrade" v-if="!isTrial">
+        <img src="./images/mb-shield.png" alt="Shield icon" class="shield-icon">
+        <p v-html='$t("purchase.all-devices", { productTitle: prodTitleList.upgrade, lang: lang, utm: utm })'></p>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/global.js?d=201920"></script>
+  <script src="./scripts/main.js?d=201920"></script>
+  <!-- <script src="http://localhost:8080/scripts/global.js?d=201928"></script>
+  <script src="http://localhost:8080/scripts/main.js?d=2019214"></script> -->
+</body>
+
+
+
+</html>
