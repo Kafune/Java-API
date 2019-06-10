@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Java-API.iml" filepath="$PROJECT_DIR$/.idea/Java-API.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Java-API_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Java-API_main.iml" group="Java-API" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Java-API_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Java-API_test.iml" group="Java-API" />
     </modules>
   </component>
 </project>

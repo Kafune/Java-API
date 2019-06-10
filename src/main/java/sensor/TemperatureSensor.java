@@ -1,5 +1,5 @@
-package sensor;
-
-public class TemperatureSensor extends Sensor {
-
-}
+//package sensor;
+//
+//public class TemperatureSensor extends Sensor {
+//
+//}
