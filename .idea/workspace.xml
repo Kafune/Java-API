@@ -47,7 +47,6 @@
       <change afterPath="$PROJECT_DIR$/.idea/modules/Java-API_main.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules/Java-API_test.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sensor/DS18B20.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -68,6 +67,7 @@
       <change beforePath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pi4j-1.2.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sensor/DS18B20.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sensor/DS18B20.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sensor/SensorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sensor/SensorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sensor/TemperatureSensor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sensor/TemperatureSensor.java" afterDir="false" />
     </list>
@@ -106,7 +106,7 @@
     <session id="-612613678">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.2" value="1" />
@@ -146,14 +146,14 @@
         <counts>
           <entry key="dummy" value="1" />
           <entry key="gradle" value="153" />
-          <entry key="java" value="894" />
+          <entry key="java" value="927" />
           <entry key="properties" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="153" />
-          <entry key="JAVA" value="894" />
+          <entry key="JAVA" value="927" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="16" />
         </counts>
@@ -171,11 +171,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/sensor/SensorController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+            <state relative-caret-position="323">
+              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -183,14 +183,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/sensor/DS18B20.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="64" lean-forward="true" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -727,8 +724,8 @@
         <option value="$PROJECT_DIR$/src/main/java/sensor/Sensor.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/sensor/DS1820.java" />
-        <option value="$PROJECT_DIR$/src/main/java/sensor/DS18B20.java" />
         <option value="$PROJECT_DIR$/src/main/java/sensor/SensorController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/sensor/DS18B20.java" />
       </list>
     </option>
   </component>
@@ -799,7 +796,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560195941571" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560197437656" />
     <property name="last_opened_file_path" value="E:/School dingen/GRAAFSCHAP ICT/Leerjaar 3/Java/Periode 7" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -888,7 +885,7 @@
       <workItem from="1560160547666" duration="557000" />
       <workItem from="1560161188403" duration="3060000" />
       <workItem from="1560164754187" duration="7159000" />
-      <workItem from="1560184683595" duration="5155000" />
+      <workItem from="1560184683595" duration="6512000" />
     </task>
     <servers />
   </component>
@@ -898,7 +895,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72270000" />
+    <option name="totallyTimeSpent" value="73627000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1049,16 +1046,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sensor/DS18B20.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sensor/Sensor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -1078,11 +1065,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/sensor/SensorController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        <state relative-caret-position="323">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sensor/DS18B20.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="64" lean-forward="true" selection-start-line="3" selection-start-column="64" selection-end-line="3" selection-end-column="64" />
         </state>
       </provider>
     </entry>

@@ -20,10 +20,6 @@ public class SensorController {
         return responseBuffer.toString();
     }
 
-    @RequestMapping("/sensors") {
-        
-    }
-
 
 }
 
