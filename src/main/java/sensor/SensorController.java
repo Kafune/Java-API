@@ -1,26 +1,25 @@
 package sensor;
 
-import com.pi4j.io.w1.W1Device;
+
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.concurrent.atomic.AtomicLong;
 
 
 @RestController
+@RequestMapping("/sensors")
 public class SensorController {
-    @RequestMapping("/sensor")
-    public String getTemperature() {
-        StringBuffer responseBuffer = new StringBuffer();
 
-        // read temperature from sensor
-        DS18B20 temp = new DS18B20();
+    private static final String template = "Dit is sensor %s!";
+    private final AtomicLong counter = new AtomicLong();
 
-        // response with data
-        responseBuffer.append("<temperature>" + temp.getTemperature() + "</temperature><br>\n");
-
-        return responseBuffer.toString();
+    @RequestMapping("/index")
+    public Sensor sensor(@RequestParam(value = "name", defaultValue = "Geen sensor") String name) {
+        return new Sensor(counter.incrementAndGet(),
+                String.format(template, name));
     }
-
-
 }
 
 //    @RequestMapping("/sensor")
