@@ -1,7 +1,16 @@
 package sensor;
 
+import com.opencsv.bean.CsvToBeanBuilder;
+import com.opencsv.bean.StatefulBeanToCsv;
+import com.opencsv.bean.StatefulBeanToCsvBuilder;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.Writer;
+import java.util.List;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+
 
 @RestController
 @RequestMapping("/temperature")
@@ -18,4 +27,14 @@ public class TemperatureController extends SensorController {
 
         return responseBuffer.toString();
     }
+
+//    @RequestMapping("/tocsv")
+//    public void convertToCsv() {
+//        List<Sensor> sensors = new CsvToBeanBuilder(FileReader("yourfile.csv"))
+//                .withType(Sensor.class).build().parse();
+//        Writer writer = new FileWriter("yourfile.csv");
+//        StatefulBeanToCsv beanToCsv = new StatefulBeanToCsvBuilder<>(writer).build();
+//        beanToCsv.write(sensors);
+//        writer.close();
+//    }
 }
