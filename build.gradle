@@ -15,7 +15,7 @@ apply plugin: 'io.spring.dependency-management'
 
 bootJar {
     baseName = 'sensor-api'
-    version =  '0.1.0'
+    version =  '0.1.1'
 }
 
 repositories {
@@ -32,5 +32,7 @@ dependencies {
     implementation group: 'com.pi4j', name: 'pi4j-device', version: '1.2'
     implementation group: 'com.pi4j', name: 'pi4j-core', version: '1.2'
     implementation 'com.opencsv:opencsv:4.6';
+    implementation 'org.json:json:20171018';
+    implementation 'org.codehaus.jackson:jackson-mapper-asl:1.9.12';
 
 }
